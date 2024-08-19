@@ -1,0 +1,7 @@
+streamlit 
+pandas 
+pybase64
+matplotlib
+seaborn 
+numpy 
+yfinance 

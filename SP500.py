@@ -3,7 +3,6 @@
 
 # In[55]:
 
-
 import streamlit as st
 import pandas as pd
 import base64
@@ -81,9 +80,11 @@ def price_plot(symbol):
   plt.ylabel('Closing Price', fontweight='bold')
   return st.pyplot()
 
-num_company = st.sidebar.slider('Number of Companies', 1, 5)
+num_company = st.sidebar.slider('Number of Companies', 1, 6)
 
 if st.button('Show Plots'):
     st.header('Stock Closing Price')
     for i in list(df_selected_sector.Symbol)[:num_company]:
         price_plot(i)
+
+st.set_option('deprecation.showPyplotGlobalUse', False)
